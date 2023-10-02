@@ -1,0 +1,118 @@
+header {
+  background-image: url('../assets/header.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  width: 100%;
+  height: 5.2vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  @media (max-width: 1024px) {
+    height: 60px;
+  }
+}
+
+.logo {
+  width: 15.1vw;
+  position: absolute;
+  top: 50%;
+  left: 3.125vw;
+  display: inline-block;
+  transform: translateY(-50%);
+  z-index: 3;
+  @media (max-width: 1024px) {
+    width: 150px;
+    top: 50%;
+    left: 20px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.navbar {
+  height: 100%;
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-nav-link-padding-x: 1vw;
+  .container-fluid {
+    height: 100%;
+    padding-right: 4.125vw;
+    .collapse {
+      height: 100%;
+    }
+  }
+  &-nav {
+    height: 100%;
+    align-items: center;
+    .nav {
+      &-item {
+        height: 100%;
+      }
+      &-link {
+        height: 100%;
+        font-size: 1.025vw;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        letter-spacing: 0.05rem;
+        &:visited {
+          color: #fff;
+        }
+        &.login {
+          height: 2.6vw;
+          font-size: 1.125vw;
+          line-height: 2.6vw;
+          padding: 0 2vw;
+          margin-left: 1vw;
+          border: solid 1px #fff;
+          color: #fff;
+          letter-spacing: 0.05rem;
+          &:hover {
+            background-color: rgb(0, 0, 0, 0.2);
+          }
+        }
+        span {
+          font-size: 0.8vw;
+          font-family: 'Roboto Condensed', sans-serif;
+          opacity: 0.8;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+  // > lg以上，hover取代原本click展開dropdown-menu
+  &:hover {
+    background-color: rgb(0, 0, 0, 0.2);
+    @include media-breakpoint-up(lg) {
+      .dropdown-menu {
+        display: block;
+        top: 100%;
+        left: 0;
+        margin-top: var(--bs-dropdown-spacer);
+      }
+    }
+  }
+  &-menu {
+    --bs-dropdown-min-width: 0;
+    --bs-dropdown-padding-y: 0;
+    --bs-dropdown-spacer: 0;
+    &.show {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+    // <
+  }
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+  }
+}

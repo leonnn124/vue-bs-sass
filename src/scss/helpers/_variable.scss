@@ -1,0 +1,19 @@
+// breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// color
+
+$yellow: #ff0000;
+$green: #0000ff;
+
+// fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');

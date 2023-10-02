@@ -1,0 +1,7 @@
+.about{
+    background-color: $yellow;
+}
+
+h1{
+    @include h1Title($purple-700)
+}
